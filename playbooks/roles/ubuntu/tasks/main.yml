@@ -1,2 +1,3 @@
 ---
   - name: ubuntu task
+    shell: echo "todo"

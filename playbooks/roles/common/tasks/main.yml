@@ -1,2 +1,3 @@
 ---
   - name: common task
+    shell: echo "todo"
