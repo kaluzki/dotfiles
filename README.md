@@ -1,6 +1,8 @@
-# My dotfiles
+# My Dotfiles
 
-Install
+## Install
 -------
-
-    curl -o- https://github.com/kaluzki/dotfiles/raw/master/install.sh | bash
+```sh
+# install
+$ curl https://github.com/kaluzki/dotfiles/raw/master/install.sh -L | sh
+```
