@@ -26,4 +26,3 @@
 - shell:
   - [sudo apt-get -y install zsh, Install zsh shell]
   - [sudo chsh -s /bin/zsh `whoami`, Use zsh as default shell for the current user]
-  - [zsh, Switch to zsh in the current session]
