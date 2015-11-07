@@ -2,6 +2,9 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 - link:
+    ~/.zprezto:
+      relink: true
+      path: prezto/
     ~/.zlogin:
       relink: true
       path: prezto/runcoms/zlogin
