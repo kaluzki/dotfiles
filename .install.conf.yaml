@@ -11,9 +11,6 @@
     ~/.zlogout:
       relink: true
       path: prezto/runcoms/zlogout
-    ~/.zpreztorc:
-      relink: true
-      path: prezto/runcoms/zpreztorc
     ~/.zprofile:
       relink: true
       path: prezto/runcoms/zprofile
@@ -23,6 +20,9 @@
     ~/.zshrc:
       relink: true
       path: prezto/runcoms/zshrc
+    ~/.zpreztorc:
+      relink: true
+      path: zpreztorc
 - shell:
   - [sudo apt-get -y install zsh, Install zsh shell]
   - [sudo chsh -s /bin/zsh `whoami`, Use zsh as default shell for the current user]
