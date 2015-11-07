@@ -1,8 +1,6 @@
 # My Dotfiles
 
-## Install
--------
 ```sh
-# install
-$ curl https://github.com/kaluzki/dotfiles/raw/master/install.sh -L | sh
+# install with dotbot
+$ curl https://git.io/dotfiles.sh -L | sh -s kaluzki
 ```
