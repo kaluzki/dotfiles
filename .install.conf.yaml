@@ -22,4 +22,4 @@
       path: prezto/runcoms/zshrc
 - shell:
   - [sudo apt-get -y install zsh, Install zsh shell]
-  - [sudo chsh -s /bin/zsh, Use zsh as default shell]
+  - [chsh -s /bin/zsh, Use zsh as default shell]
