@@ -1,0 +1,24 @@
+- clean: ['~']
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+- link:
+    ~/.zlogin:
+      relink: true
+      path: prezto/runcoms/zlogin
+    ~/.zlogout:
+      relink: true
+      path: prezto/runcoms/zlogout
+    ~/.zpreztorc:
+      relink: true
+      path: prezto/runcoms/zpreztorc
+    ~/.zprofile:
+      relink: true
+      path: prezto/runcoms/zprofile
+    ~/.zshenv:
+      relink: true
+      path: prezto/runcoms/zshenv
+    ~/.zshrc:
+      relink: true
+      path: prezto/runcoms/zshrc
+- shell:
+  - [chsh -s /bin/zsh, Use zsh as default shell]
