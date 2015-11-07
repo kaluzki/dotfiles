@@ -21,4 +21,5 @@
       relink: true
       path: prezto/runcoms/zshrc
 - shell:
-  - [chsh -s /bin/zsh, Use zsh as default shell]
+  - [sudo apt-get -y install zsh, Install zsh shell]
+  - [sudo chsh -s /bin/zsh, Use zsh as default shell]
