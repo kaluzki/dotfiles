@@ -1,7 +1,5 @@
 zstyle ':prezto:*:*' color 'yes'
 
-zstyle ':prezto:load' zfunction 'tsv' 'term_luminance'
-
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -18,5 +16,5 @@ zstyle ':prezto:load' pmodule \
   'prompt'
 
 zstyle ':prezto:module:editor' key-bindings 'vi'
-zstyle ':prezto:module:prompt' theme 'tsv' 'dark'
+zstyle ':prezto:module:prompt' theme 'sorin'
 zstyle ':prezto:module:terminal' auto-title 'yes'
