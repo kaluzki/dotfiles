@@ -8,6 +8,11 @@
 ##    license         The MIT License (MIT)
 #===============================================================================
 
-sudo apt-get -y remove zsh
 cd
-rm -rf .z* dotfiles
+for f in .*
+  do
+  dst=$(readlink -m "${f}")
+  case $dst in
+    ${HOME}/dotfiles/*) rm "${f}";;
+  esac
+done
