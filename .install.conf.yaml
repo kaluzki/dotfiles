@@ -1,6 +1,8 @@
 - clean: ['~']
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/bin, Create ~/bin/]
+
 - link:
     ~/.zprezto: prezto/
     ~/.zlogin: prezto/runcoms/zlogin
@@ -9,6 +11,8 @@
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: prezto/runcoms/zshrc
     ~/.zpreztorc: zpreztorc
+    ~/bin/fasd: fasd/fasd
+
 - shell:
   - [sudo apt-get -y install zsh, Install zsh shell]
   - [sudo chsh -s /bin/zsh `whoami`, Use zsh as default shell for the current user]

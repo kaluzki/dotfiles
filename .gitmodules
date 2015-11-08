@@ -1,3 +1,6 @@
 [submodule "prezto"]
 	path = prezto
 	url = https://github.com/sorin-ionescu/prezto
+[submodule "fasd"]
+	path = fasd
+	url = https://github.com/clvv/fasd

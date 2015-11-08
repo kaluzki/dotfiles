@@ -1,3 +1,8 @@
+path=(
+  $path,
+  $HOME/{bin,local/bin}
+)
+
 zstyle ':prezto:*:*' color 'yes'
 
 zstyle ':prezto:load' pmodule \
