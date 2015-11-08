@@ -2,27 +2,13 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 - link:
-    ~/.zprezto:
-      relink: true
-      path: prezto/
-    ~/.zlogin:
-      relink: true
-      path: prezto/runcoms/zlogin
-    ~/.zlogout:
-      relink: true
-      path: prezto/runcoms/zlogout
-    ~/.zprofile:
-      relink: true
-      path: prezto/runcoms/zprofile
-    ~/.zshenv:
-      relink: true
-      path: prezto/runcoms/zshenv
-    ~/.zshrc:
-      relink: true
-      path: prezto/runcoms/zshrc
-    ~/.zpreztorc:
-      relink: true
-      path: zpreztorc
+    ~/.zprezto: prezto/
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc
+    ~/.zpreztorc: zpreztorc
 - shell:
   - [sudo apt-get -y install zsh, Install zsh shell]
   - [sudo chsh -s /bin/zsh `whoami`, Use zsh as default shell for the current user]
