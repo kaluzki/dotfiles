@@ -9,7 +9,7 @@
     ~/.zlogout: prezto/runcoms/zlogout
     ~/.zprofile: prezto/runcoms/zprofile
     ~/.zshenv: prezto/runcoms/zshenv
-    ~/.zshrc: prezto/runcoms/zshrc
+    ~/.zshrc: zshrc
     ~/.zpreztorc: zpreztorc
     ~/bin/fasd: fasd/fasd
 
