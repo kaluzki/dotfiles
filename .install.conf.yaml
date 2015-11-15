@@ -5,12 +5,11 @@
 - link:
     ~/.zprezto: prezto/
     ~/.zlogin: prezto/runcoms/zlogin
-    ~/.zlogout: prezto/runcoms/zlogout
     ~/.zprofile: prezto/runcoms/zprofile
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: zshrc
 
 - shell:
-  - [sudo apt-get -y install zsh, Install zsh shell]
+  - [type zsh || sudo apt-get -y install zsh, Install zsh shell]
   - [sudo chsh -s /bin/zsh `whoami`, Use zsh as default shell for the current user]
   - [rm -f ~/.zcompdump; compinit, Rebuild zsh completions]
