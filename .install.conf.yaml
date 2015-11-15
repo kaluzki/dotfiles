@@ -1,7 +1,6 @@
 - clean: ['~']
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [mkdir -p ~/bin, Create ~/bin/]
 
 - link:
     ~/.zprezto: prezto/
@@ -10,8 +9,6 @@
     ~/.zprofile: prezto/runcoms/zprofile
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: zshrc
-    ~/.zpreztorc: zpreztorc
-    ~/bin/fasd: fasd/fasd
 
 - shell:
   - [sudo apt-get -y install zsh, Install zsh shell]
