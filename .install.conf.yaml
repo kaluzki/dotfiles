@@ -3,10 +3,7 @@
   - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.zprezto: prezto/
-    ~/.zlogin: prezto/runcoms/zlogin
-    ~/.zprofile: prezto/runcoms/zprofile
-    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshenv: zshenv
     ~/.zshrc: zshrc
 
 - shell:
