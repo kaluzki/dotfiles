@@ -10,11 +10,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -AlF'
-
 # navigation
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -AlFh'
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
