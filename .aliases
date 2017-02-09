@@ -52,3 +52,6 @@ alias dw="curl -LO --progress-bar"
 alias di="meld ."
 alias st="git status -s"
 alias ci="git commit"
+
+# system
+alias reboot="sudo reboot"
