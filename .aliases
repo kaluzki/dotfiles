@@ -30,8 +30,10 @@ function md
 }
 alias rm='rm -r'
 
-alias mkdir='mkdir -p'
+# disk usage
 alias du='du -h'
+alias df='df -h'
+alias dus='du -hs .'
 
 # apt
 alias apt-install="sudo apt-get install -y --show-progress"
