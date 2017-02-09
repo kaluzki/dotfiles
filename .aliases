@@ -48,3 +48,8 @@ alias apt-repo="sudo add-apt-repository -y -u"
 
 # curl
 alias curl="curl -L"
+
+# development
+alias di="meld ."
+alias st="git status -s"
+alias ci="git commit -a"
