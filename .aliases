@@ -15,7 +15,6 @@ alias la='ls -A'
 alias l='ls -AlF'
 
 # navigation
-alias .='cd --' # previous directory
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
