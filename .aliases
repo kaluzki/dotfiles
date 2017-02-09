@@ -11,9 +11,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # navigation
-alias ll='ls -alFh'
-alias la='ls -A'
-alias l='ls -AlFh'
+alias ll='LC_COLLATE=C ls -alFh --group-directories-first'
+alias la='LC_COLLATE=C ls -A --group-directories-first'
+alias l='LC_COLLATE=C ls -AlFh --group-directories-first'
 
 alias ..='cd ..'
 alias ...='cd ../..'
