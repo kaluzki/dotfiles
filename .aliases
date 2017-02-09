@@ -35,6 +35,10 @@ alias du='du -h'
 alias df='df -h'
 alias dus='du -hs .'
 
+# user administration
+alias ua='sudo useradd'
+alias ur='sudo userdel'
+
 # apt
 alias apt-install="sudo apt-get install -y --show-progress"
 alias apt-remove="sudo apt-get remove -y --show-progress"
