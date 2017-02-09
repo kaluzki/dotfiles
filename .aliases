@@ -14,10 +14,21 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -AlF'
 
+# navigation
+alias .='cd --' # previous directory
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias .....='cd ../../../..'
+alias j='cd'
+
+# directory
+function md
+{
+    mkdir -p "$1" && cd "$1"
+}
+alias rm='rm -r'
 
 alias mkdir='mkdir -p'
 alias du='du -h'
