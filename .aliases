@@ -51,4 +51,4 @@ alias dw="curl -LO --progress-bar"
 # development
 alias di="meld ."
 alias st="git status -s"
-alias ci="git commit -a"
+alias ci="git commit"
