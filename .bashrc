@@ -47,7 +47,7 @@ xterm*|rxvt*)
     ;;
 esac
 
-[ -s "$HOME/.aliases" ] && source "$HOME/.aliases"
+[ -s "$HOME/.aliases" ] && . "$HOME/.aliases"
 
 # completions
 if ! shopt -oq posix; then
