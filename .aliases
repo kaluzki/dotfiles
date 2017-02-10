@@ -36,27 +36,27 @@ alias ua='sudo useradd -m -s /bin/bash'
 alias ur='sudo userdel'
 
 # apt
-alias apt-install="sudo apt-get install -y --show-progress"
-alias apt-remove="sudo apt-get remove -y --show-progress"
-alias apt-update="sudo apt-get update -y"
-alias apt-upgrade="sudo apt-get upgrade -y"
-alias apt-repo="sudo add-apt-repository -y -u"
+alias apt-install='sudo apt-get install -y --show-progress'
+alias apt-remove='sudo apt-get remove -y --show-progress'
+alias apt-update='sudo apt-get update -y'
+alias apt-upgrade='sudo apt-get upgrade -y'
+alias apt-repo='sudo add-apt-repository -y -u'
 
 # internet
-alias dw="curl -LO --progress-bar"
-alias x="tzz extract"
+alias dw='curl -LO --progress-bar'
+alias x='tzz extract'
 
 # development
-alias di="meld ."
-alias st="git status -s"
-alias ci="git commit"
+alias di='meld .'
+alias st='git status -s'
+alias ci='git commit'
 
 # system
-alias reboot="sudo reboot"
+alias reboot='sudo reboot'
 
 
 
-# functions
+# FUNCTIONS
 
 
 
@@ -80,13 +80,13 @@ TZZ() {
 extract() {
     mime_type=`file -b --mime-type "$1"`
     case "$mime_type" in
-        "application/gzip") tar xfz "$1"
+        'application/gzip') tar xfz "$1"
         ;;
-        "application/x-bzip2") tar xfj "$1"
+        'application/x-bzip2') tar xfj "$1"
         ;;
-        "application/x-tar") tar xf "$1"
+        'application/x-tar') tar xf "$1"
         ;;
-        "application/zip") unzip "$1"
+        'application/zip') unzip "$1"
         ;;
     esac
 }
