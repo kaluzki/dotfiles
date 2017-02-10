@@ -44,6 +44,7 @@ alias apt-repo="sudo add-apt-repository -y -u"
 
 # internet
 alias dw="curl -LO --progress-bar"
+alias x="tzz extract"
 
 # development
 alias di="meld ."
@@ -52,3 +53,40 @@ alias ci="git commit"
 
 # system
 alias reboot="sudo reboot"
+
+
+
+# functions
+
+
+
+##
+# hide stdout
+##
+tzz() {
+    "$@" > /dev/null || return $?
+}
+
+##
+# hide stdout and stderr
+##
+TZZ() {
+    "$@" &> /dev/null || return $?
+}
+
+##
+# extract archives in unified manner
+##
+extract() {
+    mime_type=`file -b --mime-type "$1"`
+    case "$mime_type" in
+        "application/gzip") tar xfz "$1"
+        ;;
+        "application/x-bzip2") tar xfj "$1"
+        ;;
+        "application/x-tar") tar xf "$1"
+        ;;
+        "application/zip") unzip "$1"
+        ;;
+    esac
+}
