@@ -32,7 +32,7 @@ alias df='df -h'
 alias dus='du -hs .'
 
 # user administration
-alias ua='sudo useradd'
+alias ua='sudo useradd -m -s /bin/bash'
 alias ur='sudo userdel'
 
 # apt
