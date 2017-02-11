@@ -54,7 +54,42 @@ alias ci='git commit'
 # system
 alias reboot='sudo reboot'
 
+# docker
 
+alias docker='sudo docker'
+
+alias d-install='curl -sSL https://get.docker.com/ | sh'
+alias d-images='sudo docker images'
+
+alias d-ps='sudo docker ps'
+alias d-id='sudo docker ps --quiet --latest'
+alias d-id-running='sudo docker ps --quiet --latest --filter status=running'
+alias d-ids='sudo docker ps --quiet --all'
+alias d-ids-running='sudo docker ps --quiet --all --filter status=running'
+
+alias d-run='sudo docker run'
+alias d-run-daemon='sudo docker run --detach'
+alias d-run-interactive='sudo docker run --interactive -tty'
+alias d-sh='_docker_run true /bin/sh'
+alias d-bash='_docker_run true /bin/bash'
+
+alias d-stop='sudo docker stop'
+alias d-rm='sudo docker rm'
+
+alias d-ip="sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+##
+# @param bool interactive
+# @param mixed... cmd
+# @param string image
+##
+_docker_run() {
+    local interactive image cmd
+    [ $1 = 'true' ] && interactive='--interactive --tty' || interactive='--detach'
+    image="${@: -1}" # the last argument
+    cmd=${@:2:$(($#-2))} # all arguments except the first and last one
+    sudo docker run --publish-all $interactive $image $cmd
+}
 
 # FUNCTIONS
 
@@ -90,3 +125,6 @@ extract() {
         ;;
     esac
 }
+
+
+# curl -sSL https://get.docker.com/ | sh
