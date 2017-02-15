@@ -69,7 +69,7 @@ alias d-ids-running='sudo docker ps --quiet --all --filter status=running'
 
 alias d-run='sudo docker run'
 alias d-run-daemon='sudo docker run --detach'
-alias d-run-interactive='sudo docker run --interactive -tty'
+alias d-run-interactive='sudo docker run --interactive --tty'
 alias d-sh='_docker_run true /bin/sh'
 alias d-bash='_docker_run true /bin/bash'
 
