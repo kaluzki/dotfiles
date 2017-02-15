@@ -7,3 +7,5 @@
 !.bashrc
 !.aliases
 !.profile
+!bin/
+!bin/*
