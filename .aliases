@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # setup dotfiles
-alias dot-clone='git clone --bare https://github.com/kaluzki/dotfiles.git $HOME/.dotfiles'
-alias dot-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias git-dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
