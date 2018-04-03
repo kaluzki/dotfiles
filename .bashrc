@@ -59,8 +59,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-SDKMAN_DIR="$HOME/.sdkman"
-[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-
 export PATH="$HOME/.yarn/bin:$HOME/anaconda3/bin:$PATH $PATH"
