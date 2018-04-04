@@ -21,7 +21,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias .....='cd ../../../..'
-alias j='cd'
 
 # create a directory and go there
 function md { mkdir -p "$1" && cd "$1"; }
@@ -93,8 +92,6 @@ _docker_run() {
 }
 
 # FUNCTIONS
-
-
 
 ##
 # hide stdout
