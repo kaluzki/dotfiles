@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# setup dotfiles
-alias git-dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -25,6 +22,7 @@ alias .....='cd ../../../..'
 # create a directory and go there
 function md { mkdir -p "$1" && cd "$1"; }
 alias rm='rm -r'
+alias gr='grep -Hirn --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.idea'
 
 # disk usage
 alias du='du -h'
@@ -55,8 +53,6 @@ alias ci='git commit'
 alias reboot='sudo reboot'
 
 # docker
-
-
 alias d-install='curl -sSL https://get.docker.com/ | sh && sudo usermod -aG docker $USER'
 alias d-images='docker images'
 
@@ -123,6 +119,3 @@ extract() {
         ;;
     esac
 }
-
-
-# curl -sSL https://get.docker.com/ | sh

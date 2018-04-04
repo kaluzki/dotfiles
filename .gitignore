@@ -1,11 +1,14 @@
-# Ignore everything
-*
+# ignore everything
+/*
 
-# But not these files...
-!.gitignore
-!.gitconfig
-!.bashrc
-!.aliases
-!.profile
-!bin/
-!bin/*
+## but not these files and dirs
+!/.gitignore
+!/.gitconfig
+!/.bashrc
+!/.profile
+
+!/bin/
+!/bin/**
+
+!/etc/
+!/etc/**

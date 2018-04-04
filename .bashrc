@@ -9,8 +9,8 @@ esac
 HISTCONTROL=ignoreboth
 shopt -s histappend
 shopt -s checkwinsize
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -48,8 +48,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-[ -s "$HOME/.aliases" ] && . "$HOME/.aliases"
-
 # completions
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -59,4 +57,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$HOME/.yarn/bin:$HOME/anaconda3/bin:$PATH $PATH"
+[ -s "$HOME/etc/profile.d/sexy-bash-prompt.sh" ] && . "$HOME/etc/profile.d/sexy-bash-prompt.sh"
+[ -s "$HOME/etc/profile.d/profile.sh" ] && . "$HOME/etc/profile.d/profile.sh"
