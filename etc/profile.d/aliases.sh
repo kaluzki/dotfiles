@@ -19,8 +19,11 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias .....='cd ../../../..'
 
-# create a directory and go there
-function md { mkdir -p "$1" && cd "$1"; }
+mkcd() {
+  mkdir "$1"
+  cd "$1"
+}
+
 alias rm='rm -r'
 alias gr='grep -Hirn --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.idea'
 
