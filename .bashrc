@@ -57,5 +57,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -s "$HOME/etc/profile.d/sexy-bash-prompt.sh" ] && . "$HOME/etc/profile.d/sexy-bash-prompt.sh"
+[ -s "$HOME/etc/profile.d/bash-prompt.sh" ] && . "$HOME/etc/profile.d/bash-prompt.sh"
 [ -s "$HOME/etc/profile.d/profile.sh" ] && . "$HOME/etc/profile.d/profile.sh"
