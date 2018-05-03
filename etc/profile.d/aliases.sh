@@ -24,7 +24,6 @@ mkcd() {
   cd "$1"
 }
 
-alias rm='rm -r'
 alias gr='grep -Hirn --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.idea'
 
 # disk usage
@@ -84,7 +83,7 @@ alias d-tags="_docker_tags"
 ##
 _docker_run() {
     local interactive image cmd
-    [ $1 = 'true' ] && interactive='--interactive --tty' || interactive='--detach'
+    [ $1 = 'true' ] && interactive='--interactive --tty -d' || interactive='--detach'
     image="${@: -1}" # the last argument
     cmd=${@:2:$(($#-2))} # all arguments except the first and last one
     docker run --publish-all $interactive $image $cmd
@@ -121,4 +120,25 @@ extract() {
         'application/zip') unzip "$1"
         ;;
     esac
+}
+
+##
+# https://github.com/docker-library/docs/tree/master/composer#local-runtimebinary
+##
+composer() {
+    local composerHome=${COMPOSER_HOME:-~/.composer}
+    mkdir -p ${composerHome}
+
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --interactive \
+        --rm \
+        --user $(id -u):$(id -g) \
+        --volume ${composerHome}:/tmp \
+        --volume /etc/passwd:/etc/passwd:ro \
+        --volume /etc/group:/etc/group:ro \
+        --volume $(pwd):/app \
+        composer "$@"
 }
