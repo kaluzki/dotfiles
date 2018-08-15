@@ -17,6 +17,8 @@ if tput setaf 1 &> /dev/null; then
   # Save common color actions
   sexy_bash_prompt_bold="$(tput bold)"
   sexy_bash_prompt_reset="$(tput sgr0)"
+  sexy_bash_prompt_hostname="$HOSTNAME"
+  if [[ -n "$ACCOUNT" ]]; then sexy_bash_prompt_hostname="$ACCOUNT"; fi
 
   # If the terminal supports at least 256 colors, write out our 256 color based set
   if [[ "$(tput colors)" -ge 256 ]] &> /dev/null; then
@@ -96,6 +98,8 @@ if [[ -n "$PROMPT_UNPULLED_SYMBOL" ]]; then sexy_bash_prompt_unpulled_symbol="$P
 if [[ -n "$PROMPT_DIRTY_UNPULLED_SYMBOL" ]]; then sexy_bash_prompt_dirty_unpulled_symbol="$PROMPT_DIRTY_UNPULLED_SYMBOL"; fi
 if [[ -n "$PROMPT_UNPUSHED_UNPULLED_SYMBOL" ]]; then sexy_bash_prompt_unpushed_unpulled_symbol="$PROMPT_UNPUSHED_UNPULLED_SYMBOL"; fi
 if [[ -n "$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL" ]]; then sexy_bash_prompt_dirty_unpushed_unpulled_symbol="$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL"; fi
+
+
 
 function sexy_bash_prompt_get_git_branch() {
   # On branches, this will return the branch name
@@ -260,7 +264,7 @@ sexy_bash_prompt_get_git_info () {
 # Define the sexy-bash-prompt
 PS1="\[$sexy_bash_prompt_user_color\]\u\[$sexy_bash_prompt_reset\] \
 \[$sexy_bash_prompt_preposition_color\]at\[$sexy_bash_prompt_reset\] \
-\[$sexy_bash_prompt_device_color\]\h\[$sexy_bash_prompt_reset\] \
+\[$sexy_bash_prompt_device_color\]$sexy_bash_prompt_hostname\[$sexy_bash_prompt_reset\] \
 \[$sexy_bash_prompt_preposition_color\]in\[$sexy_bash_prompt_reset\] \
 \[$sexy_bash_prompt_dir_color\]\w\[$sexy_bash_prompt_reset\]\
 \$( sexy_bash_prompt_is_on_git && \
