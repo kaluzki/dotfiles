@@ -44,15 +44,15 @@ if [ -x /usr/bin/docker ]; then
     }
 
     ##
-    # webdevops/php-dev:*
+    # phpfn/php:*
     ##
     d-php() {
-        local name=${PWD##*/} tag=':latest' cmd='php' composerHome=${COMPOSER_HOME:-$HOME/.composer} tty
+        local name=${PWD##*/} version='72' cmd='php' composerHome=${COMPOSER_HOME:-$HOME/.composer} tty
 
         mkdir -p ${composerHome}
 
         [[ $1 == :* ]] && {
-            tag=$1
+            version=$(echo $1| cut -d':' -f 2)
             shift
         }
         [[ $1 == 'bash' ]] && {
@@ -74,14 +74,10 @@ if [ -x /usr/bin/docker ]; then
             --label 'traefik.enable=true' \
             --label "traefik.frontend.rule=Host:$name.localhost" \
             --label 'traefik.backends.php.url=*:8080' \
-            --workdir /app \
             --volume $(pwd):/app \
             --volume "$composerHome":/home/application/.composer \
-            --env XDEBUG_CONFIG='idekey=phpstorm' \
-            --env PHP_IDE_CONFIG='serverName=app' \
-            --env COMPOSER_ALLOW_XDEBUG=1 \
             --env XDEBUG_REMOTE_HOST=$(d-host-ip) \
-            webdevops/php-dev"$tag" gosu application "$cmd" "$@"
+            phpfn/"$version" "$cmd" "$@"
     }
 
     ##
