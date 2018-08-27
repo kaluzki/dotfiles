@@ -76,8 +76,9 @@ if [ -x /usr/bin/docker ]; then
             --label 'traefik.backends.php.url=*:8080' \
             --volume $(pwd):/app \
             --volume "$composerHome":/home/application/.composer \
+            --volume ~/.ssh:/home/application/.ssh:ro \
             --env XDEBUG_REMOTE_HOST=$(d-host-ip) \
-            phpfn/"$version" "$cmd" "$@"
+            runs/"$version" "$cmd" "$@"
     }
 
     ##
