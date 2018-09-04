@@ -3,6 +3,8 @@
 # https://github.com/twolfson/sexy-bash-prompt
 # Forked from gf3, https://gist.github.com/gf3/306785
 
+sexy_bash_prompt_hostname=${ACCOUNT:=$HOSTNAME}
+
 # If we are on a colored terminal
 if tput setaf 1 &> /dev/null; then
   # Reset the shell from our `if` check
@@ -17,8 +19,6 @@ if tput setaf 1 &> /dev/null; then
   # Save common color actions
   sexy_bash_prompt_bold="$(tput bold)"
   sexy_bash_prompt_reset="$(tput sgr0)"
-  sexy_bash_prompt_hostname="$HOSTNAME"
-  if [[ -n "$ACCOUNT" ]]; then sexy_bash_prompt_hostname="$ACCOUNT"; fi
 
   # If the terminal supports at least 256 colors, write out our 256 color based set
   if [[ "$(tput colors)" -ge 256 ]] &> /dev/null; then
