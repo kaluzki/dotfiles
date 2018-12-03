@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-[ -s "$HOME/.profile" ] && . "$HOME/.profile"
+[[ -s "$HOME/.profile" ]] && . "$HOME/.profile"

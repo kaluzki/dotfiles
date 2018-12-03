@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-[ -d "$HOME/etc/profile.d" ] && {
-    for i in "$HOME/etc/profile.d/"*.sh; do
-      . "$i"
+[[ -d "$HOME/etc/profile.d" ]] && {
+    for script in "$HOME/etc/profile.d/"*.sh; do
+        . "$script"
     done
-    unset i
+    unset script
 }
