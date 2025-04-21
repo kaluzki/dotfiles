@@ -1,14 +1,7 @@
-# ignore everything
 /*
 
-## but not these files and dirs
+!/bash/
+!/git/
+
 !/.gitignore
-!/.gitconfig
-!/.bashrc
-!/.profile
-
-!/bin/
-!/bin/**
-
-!/etc/
-!/etc/**
+!/setup
