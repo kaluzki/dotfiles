@@ -1,0 +1,7 @@
+\.git
+\.gitignore
+\.gitmodules
+\.stowrc
+\.idea
+_.*
+AGENTS.md

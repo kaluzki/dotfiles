@@ -1,0 +1,50 @@
+[tools]
+usage = "latest"
+ripgrep = "latest" # (rg) grep
+bat = "latest" # cat
+fd = "latest" # find
+starship = "latest" # bash
+zoxide = "latest" # cd
+eza = "latest" # ls
+zellij = "latest" # tmux
+delta = "latest" # git diff
+bottom = "latest" # (btm) top
+dust = "latest" # du
+bun = "latest"
+rust = "latest"
+java = "zulu-javafx-8"
+node = "latest"
+gh = "latest"
+go = "latest"
+"github:badlogic/pi-mono" = "latest" # pi
+opencode = "latest"
+gemini = "latest"
+"aqua:rossmacarthur/sheldon" = "latest"
+
+[shell_alias]
+cat = "bat"
+l = "eza -la --git --hyperlink --group-directories-first --icons"
+ls = "eza --hyperlink --group-directories-first" # ls
+".." = "cd .."
+"..." = "cd ../.."
+"...." = "cd ../../.."
+"....." = "cd ../../../.."
+
+
+
+#lsss = "eza --color=always --group-directories-first --icons" # ls
+#ll = "eza -lbGF --git"
+#ll = "eza -la --icons --octal-permissions --group-directories-first"
+#llm = "eza -lbGd --git --sort=modified"
+#la = "eza -lbhHigUmuSa --time-style=long-iso --git --color-scale"
+#lx = "eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale"
+#lS = "eza -1"
+
+#ll = "eza -lbF --git" # list, size, type, git
+#llm = "eza -lbGd --git --sort=modified" # long list, modified date sort
+#la = "eza -lbhHigUmuSa --time-style=long-iso --git --color-scale" # all list
+#lx = "eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale" # all + extended list
+#lS = "eza -1" # one column, just names
+#lt = "eza --tree --level=2" # tree
+#cd = "zoxide"
+

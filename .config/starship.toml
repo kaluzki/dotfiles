@@ -1,0 +1,47 @@
+add_newline = false
+#format = """
+#$username\
+#$hostname\
+#$directory\
+#$git_branch\
+#$git_commit\
+#$git_state\
+#$git_status\
+#$shell\
+#$character"""
+
+[hostname]
+ssh_only = false
+
+[username]
+show_always = true
+
+[git_branch]
+symbol = '🌱 '
+
+#[battery]
+#full_symbol = "• "
+#charging_symbol = "⇡ "
+#discharging_symbol = "⇣ "
+#unknown_symbol = "❓ "
+#empty_symbol = "❗ "
+#
+#[erlang]
+#symbol = "ⓔ "
+#
+#[nodejs]
+#symbol = "[⬢](bold green) "
+#
+#[pulumi]
+#symbol = "🧊 "
+#
+#[typst]
+#symbol = "t "
+#
+#[java]
+#disabled = true
+#
+#[hostname]
+#ssh_only = false
+#format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
+#trim_at = '.companyname.com'

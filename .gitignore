@@ -1,7 +1,2 @@
-/*
-
-!/bash/
-!/git/
-
-!/.gitignore
-!/setup
+/_*
+/.idea
