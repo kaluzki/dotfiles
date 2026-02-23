@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 
-# interactive
+# shellcheck source=/dev/null
+[[ -f ~/.profile ]] && . ~/.profile
 case $- in
   *i*) ;;
   *) return;;
 esac
 
-PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
 
-##
-# Ersetzt cat durch bat (mit deaktiviertem Paging für kurzes cat-Verhalten)
-# alias cat='bat --paging=never'
+command -v mise >/dev/null && eval "$(mise activate bash)" && eval "$(mise completion bash --include-bash-completion-lib)"
+command -v starship >/dev/null && eval "$(starship init bash)"
+command -v zoxide >/dev/null && eval "$(zoxide init bash)"
+command -v atuin >/dev/null && eval "$(atuin init bash)"
 
 ## PROMPT
 PS1='\n\w\n\$ '
@@ -72,16 +74,6 @@ alias ......='cd ../../../../..'
 
 ### nw
 alias shop='cd ~/apps/oxid-shop/ && docker compose up -d --remove-orphans && docker compose exec shop-php bash'
-
-# https://github.com/jdx/mise
-command -v mise >/dev/null && eval "$(mise activate bash)"
-# https://github.com/starship/starship
-command -v starship >/dev/null && eval "$(starship init bash)"
-command -v zoxide >/dev/null && eval "$(zoxide init bash)"
-
-
-# jetbrains toolbox
-PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
 
 ## completion
 if ! shopt -oq posix; then
